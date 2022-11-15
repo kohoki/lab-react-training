@@ -1,13 +1,17 @@
 import React from 'react'
 
-function Greetings(lang) {
-    console.log(lang.lang)
+function Greetings({lang, children}) {
   
-    if (lang.lang == "de")
+    if (lang == "de")
     {
-        console.log("tada")
         return (
-            <div><p>hallo {lang.children}</p></div>
+            <div><p>Hallo {children}</p></div>
+        )
+    }
+    else if(lang == "fr")
+    {
+        return (
+            <div><p>Bonjour {children}</p></div>
         )
     }
     else{
@@ -15,7 +19,6 @@ function Greetings(lang) {
             <div>error</div>
         )
     }
-  
 }
 
 export default Greetings
